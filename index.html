@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Panji Kusumah">
+    <meta name="description" content="Cekliskeun - My Day">
+    <meta name="keywords" content="Cekliskeun, My Day, Panji Kusumah, To do list">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="shortcut icon" href="assets/bnet.png" type="image/x-icon">
+    <title>Cekliskeun - My Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-brands fa-battle-net"></i>
+                <span>Cekliskeun</span>
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-item active" id="nav-myday"><i class="fa-regular fa-sun"></i> My Day</div>
+                <div class="nav-item" id="nav-tasks"><i class="fa-solid fa-list-check"></i> Tasks</div>
+                <div class="nav-item" id="nav-completed"><i class="fa-regular fa-circle-check"></i> Completed</div>
+            </nav>
+            <div class="user-profile-bottom">
+                <div class="avatar">613</div>
+                <div class="user-meta">
+                    <span class="name">Panji Kusumah</span>
+                    <span class="role">Web Developer</span>
+                </div>
+            </div>
+        </aside>
+        <main class="main-container">
+            <header class="content-header">
+                <div class="header-titles">
+                    <h1 id="page-title">My Day</h1>
+                    <p id="current-date"></p>
+                    <p id="digital-clock" class="clock"></p>
+                </div>
+                <button id="theme-toggle" class="theme-btn" title="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </header>
+            <div class="input-section" id="sec-input">
+                <div class="input-wrapper">
+                    <div class="input-main">
+                        <i class="fa-solid fa-plus icon-plus"></i>
+                        <input type="text" id="task-input" placeholder="Add a task">
+                        <button id="add-btn" title="Add Task"><i class="fa-solid fa-arrow-up"></i></button>
+                    </div>
+                    <div class="input-actions">
+                        <div class="action-item date-picker-group">
+                            <i class="fa-regular fa-calendar" style="color: var(--text-light);"></i>
+                            <input type="date" id="due-date" class="date-input" title="Set Deadline">
+                        </div>
+                        <div class="action-item priority-group">
+                            <span class="prio-label">Priority: <b id="current-prio"
+                                    style="color: #ff9800;">Medium</b></span>
+                            <div class="priority-dots">
+                                <span class="dot low" onclick="setPriority('Low')" title="Low"></span>
+                                <span class="dot medium active" onclick="setPriority('Medium')" title="Medium"></span>
+                                <span class="dot high" onclick="setPriority('High')" title="High"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task-scroll-area">
+                <section class="task-group" id="sec-todo">
+                    <div class="group-header">
+                        <h2 class="task-heading">To Do <b id="todo-count" class="count-badge">0</b></h2>
+                        <button id="clear-all" class="text-btn"><i class="fa-regular fa-trash-can"></i> Clear
+                            All</button>
+                    </div>
+                    <div id="todo-list" class="list-container"></div>
+                </section>
+                <section class="task-group" id="sec-done">
+                    <div class="group-header">
+                        <h2 class="task-heading">Completed <b id="done-count" class="count-badge">0</b></h2>
+                    </div>
+                    <div id="done-list" class="list-container"></div>
+                </section>
+                <section class="task-group overdue-section" id="sec-overdue">
+                    <div class="group-header warning-header">
+                        <h2 class="task-heading"><i class="fa-solid fa-triangle-exclamation"></i> Overdue</h2>
+                    </div>
+                    <div id="overdue-list" class="overdue-box">
+                        No overdue tasks.
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
