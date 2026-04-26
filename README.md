@@ -1,4 +1,4 @@
-# 📝 Cekliskeun - My Day
+# 📝 Cekliskeun 
 
 **Cekliskeun** adalah aplikasi manajemen produktivitas berbasis web yang dirancang dengan filosofi minimalis namun memiliki fungsionalitas tinggi. Proyek ini berfokus pada pengalaman pengguna yang cepat, sistem prioritas yang cerdas, dan manajemen tugas secara *real-time*.
 
